@@ -1,0 +1,37 @@
+{
+  "name": "XPEvent",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the student"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Display name of the student"
+    },
+    "xp_amount": {
+      "type": "number",
+      "description": "XP points awarded"
+    },
+    "action_type": {
+      "type": "string",
+      "enum": [
+        "video_watch",
+        "favorite_added",
+        "quiz_score"
+      ],
+      "description": "What triggered the XP"
+    },
+    "reference_id": {
+      "type": "string",
+      "description": "ID of the video or quiz"
+    }
+  },
+  "required": [
+    "user_email",
+    "user_name",
+    "xp_amount",
+    "action_type"
+  ]
+}
