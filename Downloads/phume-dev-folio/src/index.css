@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --background: 252 30% 8%;
+    --foreground: 0 0% 98%;
+    --card: 252 20% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 252 20% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 262 80% 70%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 252 20% 16%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 252 20% 16%;
+    --muted-foreground: 252 15% 60%;
+    --accent: 200 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 252 20% 20%;
+    --input: 252 20% 20%;
+    --ring: 262 80% 70%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+  html { scroll-behavior: smooth; }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glow-purple {
+  box-shadow: 0 0 40px rgba(147, 93, 255, 0.3), 0 0 80px rgba(147, 93, 255, 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #a78bfa, #38bdf8, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-mesh {
+  background-image: 
+    radial-gradient(at 20% 20%, rgba(147, 93, 255, 0.4) 0px, transparent 50%),
+    radial-gradient(at 80% 10%, rgba(56, 189, 248, 0.3) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(52, 211, 153, 0.2) 0px, transparent 50%),
+    radial-gradient(at 90% 70%, rgba(236, 72, 153, 0.2) 0px, transparent 50%);
+}
+
+.skill-icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.2);
+}
